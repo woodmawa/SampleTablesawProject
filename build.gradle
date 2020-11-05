@@ -1,0 +1,34 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+ext {
+    tablesawVersion = '0.38.1'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.6'
+    compile group: 'tech.tablesaw', name: 'tablesaw-core', version: "$tablesawVersion"
+    compile group: 'tech.tablesaw', name: 'tablesaw-json', version: "$tablesawVersion"
+    compile group: 'tech.tablesaw', name: 'tablesaw-saw', version: "$tablesawVersion"
+    compile group: 'tech.tablesaw', name: 'tablesaw-excel', version: "$tablesawVersion"
+    compile group: 'tech.tablesaw', name: 'tablesaw-plot', version: '0.24.4'
+    compile group: 'tech.tablesaw', name: 'tablesaw-aggregate', version: "$tablesawVersion"
+    compile group: 'tech.tablesaw', name: 'tablesaw-jsplot', version: "$tablesawVersion"
+    compile group: 'tech.tablesaw', name: 'tablesaw-html', version: "$tablesawVersion"
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    testCompile group: 'junit', name: 'junit', version: '4.13'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '2.0-M4-groovy-3.0'
+}
