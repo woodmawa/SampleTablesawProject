@@ -51,11 +51,12 @@ println "count of rows " + df.rowCount()
 println "count of columns " + df.columnCount()
 println df.printAll()
 println "structure : \n" + df.structure()
+println "shape of DF  : \n" + df.shape()
 
 println "\nrows  iteration..."
 for (Row row in df) {
-    print row.getText(0) + " : " + row.getText(1)
-    println "  > first column type is " + row.getColumnType("hello").printerFriendlyName
+    println row.getText(0) + " : " + row.getInt(1) + " : "+ row.getText(2)
+    //println "  > first column type is " + row.getColumnType("hello").printerFriendlyName
 }
 
 println "\ncolumns iteration..."

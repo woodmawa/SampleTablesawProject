@@ -1,10 +1,11 @@
-hello
-william
-how
-are
-doing
-now
-we
-have
-spark
-running
+words, size
+hello, 5
+william, 7
+how, 3
+are, 3
+doing, 5
+now, 3
+we, 2
+have, 4
+spark, 5
+running, 7
