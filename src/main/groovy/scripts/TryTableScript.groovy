@@ -51,4 +51,14 @@ println "count of rows " + df.rowCount()
 println "count of columns " + df.columnCount()
 println df.printAll()
 
+println "rows  iteration..."
+for (Row row in df) {
+    print row.getText(0) + " : " + row.getText(1)
+    println "  > first column type is " + row.getColumnType("hello").printerFriendlyName
+}
+
+println "columns iteration..."
+for (Column col in df.columnArray()) {
+    println col.name()
+}
 
