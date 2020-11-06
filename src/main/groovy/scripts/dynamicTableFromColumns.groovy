@@ -5,7 +5,7 @@ import tech.tablesaw.api.StringColumn
 import tech.tablesaw.api.Table
 import tech.tablesaw.columns.Column
 
-//must use typed column here ass appropriate 
+//must use typed column here ass appropriate
 Column sc1 = StringColumn.create ("String column1", "hello", "there")
 Column ic2 = IntColumn.create ("Integer column2", 1, 2)
 
