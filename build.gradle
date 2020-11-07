@@ -16,19 +16,28 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.6'
-    compile group: 'tech.tablesaw', name: 'tablesaw-core', version: "$tablesawVersion"
-    compile group: 'tech.tablesaw', name: 'tablesaw-json', version: "$tablesawVersion"
-    compile group: 'tech.tablesaw', name: 'tablesaw-saw', version: "$tablesawVersion"
-    compile group: 'tech.tablesaw', name: 'tablesaw-excel', version: "$tablesawVersion"
-    compile group: 'tech.tablesaw', name: 'tablesaw-plot', version: '0.24.4'
-    compile group: 'tech.tablesaw', name: 'tablesaw-aggregate', version: "$tablesawVersion"
-    compile group: 'tech.tablesaw', name: 'tablesaw-jsplot', version: "$tablesawVersion"
-    compile group: 'tech.tablesaw', name: 'tablesaw-html', version: "$tablesawVersion"
+    implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.6'
+    implementation group: 'tech.tablesaw', name: 'tablesaw-core', version: "$tablesawVersion"
+    implementation group: 'tech.tablesaw', name: 'tablesaw-json', version: "$tablesawVersion"
+    implementation group: 'tech.tablesaw', name: 'tablesaw-saw', version: "$tablesawVersion"
+    implementation group: 'tech.tablesaw', name: 'tablesaw-excel', version: "$tablesawVersion"
+    implementation group: 'tech.tablesaw', name: 'tablesaw-plot', version: '0.24.4'
+    implementation group: 'tech.tablesaw', name: 'tablesaw-aggregate', version: "$tablesawVersion"
+    implementation group: 'tech.tablesaw', name: 'tablesaw-jsplot', version: "$tablesawVersion"
+    implementation group: 'tech.tablesaw', name: 'tablesaw-html', version: "$tablesawVersion"
 
-    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
-    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
 
-    testCompile group: 'junit', name: 'junit', version: '4.13'
-    testCompile group: 'org.spockframework', name: 'spock-core', version: '2.0-M4-groovy-3.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.13'
+    testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.0-M4-groovy-3.0'
+}
+
+task sayHello {
+    doLast {
+        //uses property from gradle.properties
+        println "$wills_prop"
+
+        //println Project.getProperties()
+    }
 }
