@@ -1,0 +1,5 @@
+# File: src/main/resources/META-INF/services/org.codehaus.groovy.runtime.ExtensionModule
+moduleName = file-resources-loading
+moduleVersion = 1.0
+extensionClasses = utils.FileUtils
+staticExtensionClasses = utils.FileUtils
