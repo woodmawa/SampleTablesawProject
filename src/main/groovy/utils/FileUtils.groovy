@@ -27,7 +27,7 @@ class FileUtils {
     }
 
     // this is the extension method for File
-    static File getFileFromResource(final File self, final String fileName) throws URISyntaxException{
+    static File fromResource(final File self, final String fileName) throws URISyntaxException{
 
         //get the root classloader from this class
         ClassLoader classLoader = FileUtils.getClassLoader()
